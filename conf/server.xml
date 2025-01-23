@@ -157,6 +157,14 @@
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
       </Host>
+
+     <!-- Cấu hình cho domain1.com -->
+     <Host name="tomcat1.triebee.com" appBase="webapps">
+          <Alias>www.tomcat1.triebee.com</Alias>
+          <Context path="" docBase="tomcat1" />
+          <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+               prefix="tomcat1_access_log" suffix=".txt" pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+     </Host>
     </Engine>
   </Service>
 </Server>
